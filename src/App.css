@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;400;600&display=swap');
+
 /* === BEGIN NORMALIZED CSS === */
 
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -276,3 +278,19 @@ summary {
 }
 
 /* === END NORMALIZED CSS === */
+
+/* === BEGIN CUSTOM STYLES === */
+
+:root {
+	font-family: 'Martian Mono', monospace;
+	font-weight: 200;
+	font-size: 16px;
+	background-color: var(--bg-color);
+	color: var(--main-color);
+
+	--bg-color: #020887;
+	--main-color: #FFF;
+	--alt-color: #000;
+	--accent: #D33;
+	--shadow: #797B84;
+}
