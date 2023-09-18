@@ -294,3 +294,8 @@ summary {
 	--accent: #D33;
 	--shadow: #797B84;
 }
+
+a, a:visited, a:active, a:hover {
+	color: var(--main-color);
+	text-decoration: none;
+}
