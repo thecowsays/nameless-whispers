@@ -1,3 +1,30 @@
-/* p::first-letter {
-    text-decoration: underline;
+.container {
+    background-color: var(--shadow);
+    min-width: 100vw;
+    height: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* .menu-wrapper {
 } */
+
+.menu-link {
+    color: var(--main-color);
+}
+
+.menu-link::first-letter {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.menu-link:hover {
+    cursor: pointer;
+}
+
+.menu-link:hover::first-letter {
+    font-weight: 600;
+    color: var(--accent);
+}
+
