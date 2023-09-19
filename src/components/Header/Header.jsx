@@ -15,11 +15,6 @@ const Header = () => {
         onClick={() => navigate("/")}
         className={(HeaderCSS.menuLink, HeaderCSS.icon)}
       />
-      {/* {navbar.map((item) => {
-        <Link to={`/${item}`} className={HeaderCSS.menuLink}>
-          {item}
-        </Link>;
-      })} */}
 
       {navbar.map((item) => (
         <Link className={HeaderCSS.menuLink} to={`/${item}`} key={item}>
