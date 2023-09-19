@@ -1,18 +1,18 @@
 .container {
-    min-width: 100vw;
-    height: 80vh;
-    border: 1px solid lime;
+    width: 98vw;
+    height: 88vh;
+    border: 4px double lime;
     border-top: 0;
     border-radius: 4px;
-    margin: 1em;
+    margin: 1em 1vw;
     padding: 0 2px 2px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-wrapper {
     height: 100%;
     width: 100%;
-    border: 1px solid lime;
-    border-top: 0;
-    border-radius: 0 4px;
     padding: 0 1em 1em 1em;
 }
