@@ -17,7 +17,7 @@ const NewWhisper = () => {
         <textarea
           id="body"
           className={NewWhisperCSS.textarea}
-          //   placeholder -- to be an array of prompts, coming soon
+          //   placeholder -- to be an array of prompts, coming soon(tm)
           placeholder="Today I learned..."
         />
       </form>
