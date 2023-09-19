@@ -1,18 +1,18 @@
 .container {
     background-color: var(--shadow);
-    min-width: 100vw;
+    width: 100vw;
     height: 1.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 .5em;
 }
 
 /* === NAVBAR === */
 
 .menu-link {
     color: var(--main-color);
-    margin-left: 1em;
+    margin-left: 1.25em;
 }
 
 .menu-link::first-letter {
