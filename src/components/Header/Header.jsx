@@ -6,7 +6,6 @@ import HeaderCSS from "./Header.module.css";
 const Header = () => {
   const navbar = ["File", "Edit", "View", "Login"];
   const navigate = useNavigate("");
-  const iconStyles = `HeaderCSS.menuLink HeaderCSS.icon`;
 
   return (
     <div className={HeaderCSS.container}>
