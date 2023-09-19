@@ -1,18 +1,12 @@
 # vite-react-basic-template
 A boilerplate template for ReactJS projects using Vite -- cleaned up and ready to code. Contains common directories complete with common components and stylesheets, associated imports, and dependencies listed in package.json.
 
-**Note**: Utilizes SWC instead of Babel and pNpm instead of npm.
+**Note**: Utilizes SWC instead of Babel for faster performance.
 
-To install dependencies using pNpm (preferred), run:
-
-`pnpm install`
-
-To clone **only** the branch you wish to use, run:
-
-`git clone --branch <branch-name-you-want> https://github.com/thecowsays/vite-react-basic-template.git <your-new-repo-name>`
+*Different branches include additional features such as directory structure and preset components, normalized CSS, etc. Their names are self-explanatory.*
 
 ## Main Branch Boilerplate
-This template contains the most basic directories and components cleaned up and ready for coding. It is bundled using Vite for React + SWC.
+This template contains the most basic directories and components cleaned up and ready for coding.
 
 ### Directories & Components
 Common components such as Header, Footer, and Homepage JSX files are in place within respective folders. Each file has the basic functional component syntax preset as well as associated stylesheets imported.

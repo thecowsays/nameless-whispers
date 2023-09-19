@@ -1,0 +1,39 @@
+.container {
+    background-color: var(--shadow);
+    width: 100vw;
+    height: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .5em;
+}
+
+/* === NAVBAR === */
+
+.menu-link {
+    color: var(--main-color);
+    margin-left: 1.25em;
+}
+
+.menu-link::first-letter {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.menu-link:hover {
+    cursor: pointer;
+}
+
+.menu-link:hover::first-letter {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* Home Icon Settings */
+
+.icon path {
+  stroke-width: 2rem;
+}
+  .icon:hover {
+    color: var(--accent);
+}

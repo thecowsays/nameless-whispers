@@ -1,0 +1,21 @@
+h1 {
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0 0 1em 0;
+    text-align: center;
+    text-decoration: underline;
+    /* border: 0 solid lime;
+    border-bottom: 2px;
+    border-style: ridge;
+    line-height: 1.75rem; */
+}
+
+textarea {
+    height: 50%;
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    color: var(--main-color);
+    font-weight: 100;
+    text-align: justify;
+}
