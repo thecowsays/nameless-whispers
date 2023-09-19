@@ -1,14 +1,15 @@
+import NewWhisper from "../../components/NewWhisper/NewWhisper";
+
 import HomepageCSS from "./Homepage.module.css";
 
 const Homepage = () => {
   return (
     <div className={HomepageCSS.container}>
       <div className={HomepageCSS.contentWrapper}>
-        <p>
-          Content
-          <br />
-          Area Here
-        </p>
+        {/* <h1 className={HomepageCSS.h1}></h1> */}
+        {
+          <NewWhisper />
+        }
       </div>
     </div>
   );
