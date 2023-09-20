@@ -299,3 +299,28 @@ a, a:visited, a:active, a:hover {
 	color: var(--main-color);
 	text-decoration: none;
 }
+
+/* --- GLOBAL BUTTON STYLES & FX --- */
+
+button {
+    color: var(--main-color);
+    background-color: var(--shadow);
+    /* border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD; */
+    border: 0;
+    border-radius: 1px;
+    padding: .25em .5em;
+}
+
+button::first-letter {
+    text-decoration: underline;
+    font-weight: 400;
+    /* color: var(--accent); */
+}
+
+button:hover::first-letter {
+    color: var(--accent);
+    font-weight: 600;
+}
