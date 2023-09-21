@@ -46,6 +46,16 @@ li::first-letter {
     color: var(--main-color);
 }
 
-.center {
-text-align: center;
+/* -- undecided on first letter red or white or any --  */
+
+/* li:hover::first-letter {
+    color: var(--accent);
+} */
+
+.title {
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }

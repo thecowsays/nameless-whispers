@@ -10,7 +10,7 @@ const Homepage = () => {
         <div>
           <h1>Nameless Whispers</h1>
           <div className={HomepageCSS.mainWrapper}>
-            <p className={HomepageCSS.center}>MAIN MENU</p>
+            <p className={HomepageCSS.title}>Main Menu</p>
             <ol>
               <li>Register / Login</li>
               <li>Whisper a Thought</li>
