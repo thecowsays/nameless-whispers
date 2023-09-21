@@ -13,7 +13,7 @@ const NewWhisper = () => {
 
   return (
     <div>
-      <h1 className={NewWhisperCSS.h1}>{todaysDate}</h1>
+      <h1>{todaysDate}</h1>
       <form>
         <textarea
           id="body"

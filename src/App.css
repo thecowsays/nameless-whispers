@@ -292,12 +292,27 @@ summary {
 	--main-color: #FFF;
 	--alt-color: #000;
 	--accent: #D33;
+	--alt-accent: #0F0;
 	--shadow: #797B84;
 }
 
 a, a:visited, a:active, a:hover {
 	color: var(--main-color);
 	text-decoration: none;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 1em 0;
+    text-align: center;
+    text-decoration: underline;
+	text-decoration-skip-ink:all;
+	text-underline-offset: 2px;
+    /* border: 0 solid lime;
+    border-bottom: 2px;
+    border-style: ridge;
+    line-height: 1.75rem; */
 }
 
 /* --- GLOBAL BUTTON STYLES & FX --- */
