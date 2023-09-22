@@ -18,16 +18,43 @@
     position: relative;
 }
 
-
 .auth-form {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em 1.5em 1em;
 }
 
 input::placeholder {
-    font-size: .75rem;
+    font-size: .9rem;
     opacity: 50%;
 }
 
 input {
-    width: 16ch;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--main-color);
+    cursor: text;
+    color: var(--main-color);
+    font-weight: 200;
+}
+
+fieldset {
+display: flex;
+flex-direction: column;
+padding-bottom: 1.5em;
+padding-right: 1.5em;
+}
+
+button {
+    width: 6em;
+    align-self: flex-end;
+    cursor: pointer;
 }
