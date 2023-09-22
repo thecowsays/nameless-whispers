@@ -6,7 +6,7 @@ const Auth = () => {
   const [existingUser, setExistingUser] = useState(true);
 
   return (
-    <div>
+    <div className={AuthCSS.container}>
       {existingUser ? (
         <form className={AuthCSS.authForm}>
           <p>
