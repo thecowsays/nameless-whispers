@@ -11,52 +11,9 @@
     align-items: center;
 }
 
-.content-wrapper {
+.innerContainer {
     height: 100%;
     width: 100%;
     padding: 0 1em 1em 1em;
     position: relative;
-}
-
-.main-wrapper {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    border: 4px double var(--alt-accent);
-    border-radius: 4px;
-}
-
-li {
-    margin-bottom: 1em;
-}
-
-li:hover {
-    background-color: var(--shadow);
-    color: var(--alt-color);
-    font-weight: 600;
-    cursor: pointer;
-}
-
-li::first-letter {
-    text-decoration: underline;
-    font-weight: 400;
-    color: var(--main-color);
-}
-
-/* -- undecided on first letter red or white or any --  */
-
-/* li:hover::first-letter {
-    color: var(--accent);
-} */
-
-.title {
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 2em;
-    margin-bottom: 1em;
 }
