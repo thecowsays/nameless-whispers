@@ -12,10 +12,11 @@ const Homepage = () => {
           <div className={HomepageCSS.mainWrapper}>
             <p className={HomepageCSS.title}>Main Menu</p>
             <ol>
-              <li>Register / Login</li>
+              {/* Future Feature: Have item 1 change to 'Logout' using Auth */}
+              <li>Signup / Login</li>
               <li>Whisper a Thought</li>
               {/* <li>Listen to Others</li> */}
-              <li>What is this site?</li>
+              <li>Help</li>
               <li>Quit</li>
             </ol>
           </div>
