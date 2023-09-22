@@ -1,0 +1,12 @@
+.auth-form {
+    text-align: center;
+}
+
+input::placeholder {
+    font-size: .75rem;
+    opacity: 50%;
+}
+
+input {
+    width: 16ch;
+}
