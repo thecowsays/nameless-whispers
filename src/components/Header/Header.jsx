@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 
+
 import { SlHome } from "react-icons/sl";
 import HeaderCSS from "./Header.module.css";
 
 const Header = () => {
+  // Future Feature -> have 'Login' dynamically change based on Auth
   const navbar = ["File", "Edit", "View", "Login"];
   const navigate = useNavigate("");
 
