@@ -1,13 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/firebaseConfig";
 
 import { SlHome } from "react-icons/sl";
 import HeaderCSS from "./Header.module.css";
 
 const Header = () => {
-  // Future Feature -> have 'Login' dynamically change based on Auth
-  const navbar = ["File", "Edit", "View", "Login"];
-  const navigate = useNavigate("");
+  const navbar = ["File", "Edit", "View"];
+  const navigate = useNavigate();
+
+  // get user data
+  const [user] = useAuthState(auth);
 
   return (
     <div className={HeaderCSS.container}>
@@ -22,9 +25,15 @@ const Header = () => {
           {item}
         </Link>
       ))}
-
-      {/* </div> */}
-      {/* <div>Title Goes Here</div> */}
+      {user ? (
+        <Link to={"/"} className={HeaderCSS.menuLink}>
+          Logout
+        </Link>
+      ) : (
+        <Link className={HeaderCSS.menuLink} to={"/auth"}>
+          Login
+        </Link>
+      )}
     </div>
   );
 };
