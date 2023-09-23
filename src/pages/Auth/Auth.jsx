@@ -3,7 +3,12 @@ import { useState } from "react";
 import AuthCSS from "./Auth.module.css";
 
 const Auth = () => {
-  const [existingUser, setExistingUser] = useState(false);
+  const [existingUser, setExistingUser] = useState(true);
+
+  // Track user input to register using state & event handler
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className={AuthCSS.container}>
@@ -18,6 +23,8 @@ const Auth = () => {
                 required
                 type="email"
                 placeholder="bigwillyg@hotmail.com"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
               />
             </div>
             <div>
@@ -27,11 +34,17 @@ const Auth = () => {
                 required
                 type="password"
                 placeholder="******"
+                // minLength={6}
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
               />
             </div>
             <button type="submit">OK</button>
           </fieldset>
-          <p>No account? Signup here!</p>
+          <p>
+            No account? Signup{" "}
+            <span onClick={() => setExistingUser(false)}>here!</span>
+          </p>
         </form>
       ) : (
         <form className={AuthCSS.authForm}>
@@ -45,6 +58,8 @@ const Auth = () => {
                 type="text"
                 placeholder="Bill"
                 autoCapitalize="on"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
               />
             </div>
             <div>
@@ -54,6 +69,8 @@ const Auth = () => {
                 required
                 type="email"
                 placeholder="bigwillyg@hotmail.com"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
               />
             </div>
             <div>
@@ -63,11 +80,17 @@ const Auth = () => {
                 required
                 type="password"
                 placeholder="******"
+                // minLength={6}
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
               />
             </div>
             <button type="submit">OK</button>
           </fieldset>
-          <p>No account? Signup here!</p>
+          <p>
+            Already signed up? Login{" "}
+            <span onClick={() => setExistingUser(true)}>here!</span>
+          </p>
         </form>
       )}
     </div>
