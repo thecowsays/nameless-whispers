@@ -1,15 +1,38 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { auth } from "./../../config/firebaseConfig";
 
 import AuthCSS from "./Auth.module.css";
 
 const Auth = () => {
   const [existingUser, setExistingUser] = useState(true);
 
+  const navigate = useNavigate();
+
   // Track user input to register using state & event handler
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // fn for new user account
+  const handleSignup = (e) => {
+    e.preventDefault();
+    // create user with email and pw
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        // console.log(res.user);
+        // updateProfile used to manually add displayName, otherwise null
+        updateProfile(auth.currentUser, { displayName: name });
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className={AuthCSS.container}>
       {existingUser ? (
@@ -47,7 +70,7 @@ const Auth = () => {
           </p>
         </form>
       ) : (
-        <form className={AuthCSS.authForm}>
+        <form className={AuthCSS.authForm} onSubmit={handleSignup}>
           <fieldset>
             <legend className="title">Register</legend>
             <div>
