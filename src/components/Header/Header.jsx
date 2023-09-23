@@ -14,28 +14,30 @@ const Header = () => {
 
   return (
     <div className={HeaderCSS.container}>
-      {/* <div className="menu-wrapper"> */}
-      <SlHome
-        onClick={() => navigate("/")}
-        className={(HeaderCSS.menuLink, HeaderCSS.icon)}
-      />
+      <div className={HeaderCSS.navbarWrapper}>
+        <SlHome
+          onClick={() => navigate("/")}
+          className={(HeaderCSS.menuLink, HeaderCSS.icon)}
+        />
 
-      {navbar.map((item) => (
-        <Link className={HeaderCSS.menuLink} to={`/${item}`} key={item}>
-          {item}
-        </Link>
-      ))}
-      {user ? (
-        <Link to={"/"} className={HeaderCSS.menuLink}>
-          Logout
-        </Link>
-      ) : (
-        <Link className={HeaderCSS.menuLink} to={"/auth"}>
-          Login
-        </Link>
-      )}
+        {navbar.map((item) => (
+          <Link className={HeaderCSS.menuLink} to={`/${item}`} key={item}>
+            {item}
+          </Link>
+        ))}
+        {user ? (
+          <Link to={"/"} className={HeaderCSS.menuLink}>
+            Logout
+          </Link>
+        ) : (
+          <Link className={HeaderCSS.menuLink} to={"/auth"}>
+            Login
+          </Link>
+        )}
+      </div>
+      <div className={HeaderCSS.userGreeting}></div>
+      {user && <div>{`Hello, ${user?.displayName}!`}</div>}
     </div>
   );
-};
-
+}
 export default Header;
