@@ -13,9 +13,15 @@ const NewWhisper = () => {
   // final date format as displayed for user
   const todaysDate = `${month} ${day}, ${year}`;
 
+  // Get the current date and submit with form data
+  const entryDate = new Date().getTime() / 1000;
+  // Displays YYYY-MM-DD without time, for history page (future feature)
+  // const DateWithoutTime = new Date().toISOString().split("T")[0];
+
   // Save user inputs to state
   const [userInput, setUserInput] = useState({
     content: "",
+    entryDate: "",
   });
 
   return (
@@ -31,13 +37,15 @@ const NewWhisper = () => {
                 <textarea
                   id="content"
                   className={NewWhisperCSS.textarea}
-                  //   placeholder -- to be an array of prompts, coming soon(tm)
+                  //   future feature: show random prompt from array/firestore
                   placeholder="Today I learned..."
                   maxLength="250" // 250 chars is ~50 words
                   onChange={(e) =>
                     setUserInput({ ...userInput, content: e.target.value })
                   }
                 />
+                {/* hidden field saves entry date on user submission */}
+                <input type="hidden" id={entryDate} />
               </fieldset>
             </form>
             <button type="submit">Submit</button>
