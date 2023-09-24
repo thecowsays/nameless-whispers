@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../config/firebaseConfig";
+import { signOut } from "@firebase/auth";
 
 import { SlHome } from "react-icons/sl";
 import HeaderCSS from "./Header.module.css";
@@ -26,11 +28,15 @@ const Header = () => {
           </Link>
         ))}
         {user ? (
-          <Link to={"/"} className={HeaderCSS.menuLink}>
+          <Link
+            to={"/"}
+            className={HeaderCSS.menuLink}
+            onClick={() => signOut(auth)}
+          >
             Logout
           </Link>
         ) : (
-          <Link className={HeaderCSS.menuLink} to={"/auth"}>
+          <Link to={"/auth"} className={HeaderCSS.menuLink}>
             Login
           </Link>
         )}
@@ -39,5 +45,5 @@ const Header = () => {
       {user && <div>{`Hello, ${user?.displayName}!`}</div>}
     </div>
   );
-}
+};
 export default Header;
