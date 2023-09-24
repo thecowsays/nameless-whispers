@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import MainMenuCSS from "./MainMenu.module.css";
 
 const MainMenu = () => {
