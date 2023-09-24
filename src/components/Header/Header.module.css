@@ -8,9 +8,10 @@
     padding: 0 .5em;
 }
 
-div:nth-child(3) {
+/* Causing issues with other styles, why does this exist? */
+/* div:nth-child(3) {
     font-weight: 400;
-}
+} */
 
 /* === NAVBAR === */
 
