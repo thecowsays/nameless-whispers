@@ -32,15 +32,25 @@ const Auth = () => {
         navigate("/");
       })
       .catch((err) => console.log(err));
+
+    // fn for login
+    const handleLogin = (e) => {
+      e.preventDefault();
+      signInWithEmailAndPassword(auth, email, password)
+        .then((res) => {
+          navigate("/");
+        })
+        .catch((err) => console.log(err));
+    };
   };
   return (
     <div className={AuthCSS.container}>
       {existingUser ? (
-        <form className={AuthCSS.authForm}>
+        <form className={AuthCSS.authForm} onSubmit={handleLogin}>
           <fieldset>
             <legend className="title">LOGIN</legend>
             <div>
-              <label htmlFor="email">E-mail:&nbsp;</label>
+              <label htmlFor="email">E-mail:</label>
               <input
                 id="email"
                 required
@@ -51,7 +61,7 @@ const Auth = () => {
               />
             </div>
             <div>
-              <label htmlFor="password">Password:&nbsp;</label>
+              <label htmlFor="password">Password:</label>
               <input
                 id="password"
                 required
