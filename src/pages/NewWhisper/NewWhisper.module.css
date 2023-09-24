@@ -52,7 +52,7 @@ textarea {
     color: var(--main-color);
     font-weight: 100;
     text-align: justify;
-    text-indent: 5ch; /* char units for 5-space tab */
+    text-indent: 4ch; /* char units for tab indent */
     border: 0;
 }
 
