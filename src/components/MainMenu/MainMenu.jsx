@@ -12,10 +12,10 @@ const MainMenu = () => {
           <Link to="/auth">Signup / Login</Link>
         </li>
         <li>
-          <Link to="/newwhisper">Whisper a Thought</Link>
+          <Link to="/newwhisper">Whisper Something New</Link>
         </li>
         <li>
-          <Link to="/view">View Recent Entries</Link>
+          <Link to="/view">Whispers of the World</Link>
         </li>
         <li>
           <Link to="/help">Help</Link>
