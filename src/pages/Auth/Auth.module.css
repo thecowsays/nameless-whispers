@@ -59,15 +59,22 @@ button {
     cursor: pointer;
 }
 
+span {
+    /* text-transform: capitalize; */
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    text-underline-offset: 2px;
+}
+
+span::first-letter { /* this isn't working ?! */
+    text-decoration: underline;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
 span:hover {
     background-color: var(--shadow);
     color: var(--alt-color);
     font-weight: 600;
     cursor: pointer;
-}
-
-span::first-letter {
-    text-decoration: underline;
-    font-weight: 400;
-    color: var(--main-color);
 }

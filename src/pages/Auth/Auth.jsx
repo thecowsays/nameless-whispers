@@ -75,7 +75,7 @@ const Auth = () => {
           </fieldset>
           <p>
             No account? Signup{" "}
-            <span onClick={() => setExistingUser(false)}>here!</span>
+            <span onClick={() => setExistingUser(false)}>here</span>!
           </p>
         </form>
       ) : (
@@ -83,7 +83,7 @@ const Auth = () => {
           <fieldset>
             <legend className="title">Register</legend>
             <div>
-              <label htmlFor="name">Name:&nbsp;</label>
+              <label htmlFor="name">Name:</label>
               <input
                 id="name"
                 required
@@ -95,7 +95,7 @@ const Auth = () => {
               />
             </div>
             <div>
-              <label htmlFor="email">E-mail:&nbsp;</label>
+              <label htmlFor="email">E-mail:</label>
               <input
                 id="email"
                 required
@@ -106,7 +106,7 @@ const Auth = () => {
               />
             </div>
             <div>
-              <label htmlFor="password">Password:&nbsp;</label>
+              <label htmlFor="password">Password:</label>
               <input
                 id="password"
                 required
@@ -121,7 +121,7 @@ const Auth = () => {
           </fieldset>
           <p>
             Already signed up? Login{" "}
-            <span onClick={() => setExistingUser(true)}>here!</span>
+            <span onClick={() => setExistingUser(true)}>here</span>!
           </p>
         </form>
       )}
