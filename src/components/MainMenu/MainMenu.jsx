@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainMenuCSS from "./MainMenu.module.css";
 
 const MainMenu = () => {
@@ -6,11 +7,21 @@ const MainMenu = () => {
       <p className="title">Main Menu</p>
       <ol>
         {/* Future Feature: Have item 1 change to 'Logout' using Auth */}
-        <li>Signup / Login</li>
-        <li>Whisper a Thought</li>
+        <li>
+          <Link to="/auth">Signup / Login</Link>
+        </li>
+        <li>
+          <Link to="/NewWhisper">Whisper a Thought</Link>
+        </li>
         {/* <li>Listen to Others</li> */}
-        <li>Help</li>
-        <li>Quit</li>
+        <li>
+          <Link to="/help">Help</Link>
+        </li>
+        <li>
+          <Link to="https://poopoopaper.com/pages/poop-to-paper-process">
+            Exit
+          </Link>
+        </li>
       </ol>
     </div>
   );
