@@ -1,13 +1,38 @@
 .container {
-    margin: 1em;
-    margin-left: 3%;
-    font-size: .675rem;
-    opacity: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 3vw;
 }
 
-.icon {
-    font-size: 1.75em;
-    margin: 0;
-    padding: 0;
-    padding-right: 1em;
+.container svg {
+    font-size: 1.5rem;
+    margin: 0 .25em;
+}
+
+.signature {
+    font-size: .75rem;
+}
+
+.signature svg {
+    margin: 0 1ch;
+}
+
+.social {
+    opacity: 75%;
+    font-size: 1.5rem;
+    margin: 0 .25em 0 0;
+    filter: grayscale();
+}
+
+/* Removes filter to show color */
+.social:hover {
+    filter: none;
+}
+
+.social svg:hover {
+    opacity: 100%;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 2.5rem;
 }

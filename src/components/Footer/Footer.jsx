@@ -1,27 +1,41 @@
-import { SlHeart } from "react-icons/sl";
 import {
   SiReact,
   SiFirebase,
-  SiGithub,
+  SiJavascript,
   SiVisualstudiocode,
+  SiGithub,
+  SiLinkedin,
 } from "react-icons/si";
+import { RiHeartsFill } from "react-icons/ri";
 
 import FooterCSS from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <div className={FooterCSS.container}>
-      <p className={FooterCSS.icon}>
+      <p>
         <SiReact style={{ color: "#61DAFB" }} />
         <SiFirebase style={{ color: "#FFCA28" }} />
-        {/* <SiGithub style={{ color: "#181717" }} /> */}
-        <SiGithub />
+        <SiJavascript style={{ color: "#F7DF1E" }} />
         <SiVisualstudiocode style={{ color: "#007ACC" }} />
       </p>
-      <p alt="&copy;2023 B.W. All rights reserved.">
-        Made with <SlHeart style={{ color: "#F00", opacity: "100%" }} />
-        by Brandon W.
-      </p>
+      <div>
+        <p
+          className={FooterCSS.signature}
+          alt="&copy;2023 B.W. All rights reserved."
+        >
+          Made with
+          <RiHeartsFill
+            style={{ color: "#F00", opacity: "100%", fontSize: "120%" }}
+          />
+          by Brandon W.
+        </p>
+        <p className={FooterCSS.social}>
+          <SiGithub style={{ color: "#181717" }} />
+          {/* <SiGithub /> */}
+          <SiLinkedin style={{ color: "#0A66C2" }} />
+        </p>
+      </div>
     </div>
   );
 };
