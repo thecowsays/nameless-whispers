@@ -31,7 +31,7 @@ const NewWhisper = () => {
           {/* <h1>{todaysDate}</h1> */}
           <div className={NewWhisperCSS.formContainer}>
             <form>
-              <fieldset>
+              <fieldset className={NewWhisperCSS.fieldsetContent}>
                 <legend className="title">{todaysDate}</legend>
                 <label htmlFor="content"></label>
                 <textarea
@@ -39,14 +39,22 @@ const NewWhisper = () => {
                   className={NewWhisperCSS.textarea}
                   //   future feature: show random prompt from array/firestore
                   placeholder="Today I learned..."
-                  maxLength="250" // 250 chars is ~50 words
+                  maxLength="400" // 400 chars is ~80 words without spaces
+                  spellCheck="true"
                   onChange={(e) =>
                     setUserInput({ ...userInput, content: e.target.value })
                   }
                 />
-                {/* hidden field saves entry date on user submission */}
-                <input type="hidden" id={entryDate} />
               </fieldset>
+
+              <fieldset className={NewWhisperCSS.fieldsetCitation}>
+                <legend>Citation</legend>
+                <label htmlFor="source"></label>
+                <input type="text" id="source" placeholder="Optional" />
+              </fieldset>
+
+              {/* hidden field saves entry date on user submission */}
+              <input type="hidden" id={entryDate} />
             </form>
             <button type="submit">Submit</button>
           </div>

@@ -35,24 +35,44 @@ form {
     width: 100%;
     height: 100%;
     margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 fieldset {
+    margin-bottom: 1em;
+    border-radius: 3px;
+}
+
+.fieldset-content {
     width: 100%;
     height: 100%;
     text-align: center;
     padding: 0 1em .75em 1em;
 }
 
+.fieldset-citation {
+    text-align: left;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: .5em;
+}
+
+input {
+    border-bottom: none;
+    font-weight: 100;
+}
+
 textarea {
     height: 100%;
     width: 100%;
     resize: none;
+    padding: 0 1em 1em 1em;
     background-color: transparent;
+    border: 0;
     color: var(--main-color);
     font-weight: 100;
     text-align: justify;
     text-indent: 4ch; /* char units for tab indent */
-    border: 0;
 }
 
