@@ -1,9 +1,0 @@
-textarea {
-    height: 50%;
-    width: 100%;
-    resize: none;
-    background-color: transparent;
-    color: var(--main-color);
-    font-weight: 100;
-    text-align: justify;
-}
