@@ -32,16 +32,15 @@ const Auth = () => {
         navigate("/");
       })
       .catch((err) => console.log(err));
-
-    // fn for login
-    const handleLogin = (e) => {
-      e.preventDefault();
-      signInWithEmailAndPassword(auth, email, password)
-        .then((res) => {
-          navigate("/");
-        })
-        .catch((err) => console.log(err));
-    };
+  };
+  // fn for login
+  const handleLogin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        navigate("/Homepage");
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <div className={AuthCSS.container}>
